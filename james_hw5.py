@@ -92,7 +92,7 @@ optimizer = optim.Adam(model.parameters(), lr=0.001, weight_decay=1e-5)
 
 
 # Defines training of model with PneumoniaMNIST training data
-def train_model(model, train_loader, val_loader, criterion, optimizer, num_epochs=10):
+def train_model(model, train_loader, val_loader, criterion, optimizer, num_epochs=7):
 
     # Initialize dictionaries for plotting metrics
     history = {
@@ -150,7 +150,7 @@ def train_model(model, train_loader, val_loader, criterion, optimizer, num_epoch
     return history
 
 # Executes training cycles
-history = train_model(model, train_loader, val_loader, criterion, optimizer, num_epochs=10)
+history = train_model(model, train_loader, val_loader, criterion, optimizer, num_epochs=7)
 history
 
 # Plots training performance
